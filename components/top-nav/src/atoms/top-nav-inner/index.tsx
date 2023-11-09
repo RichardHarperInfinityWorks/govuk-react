@@ -6,10 +6,10 @@ const TopNavInner = styled('div')({
   flexDirection: 'column',
   width: `calc(100% - ${SPACING.SCALE_5})`,
   maxWidth: '960px',
-  padding: `calc(${SPACING.SCALE_2} * 0.8) ${SPACING.SCALE_3}`,
+  padding: `calc(${SPACING.SCALE_2} * 0.6) ${SPACING.SCALE_3}`,
   boxSizing: 'border-box',
   [MEDIA_QUERIES.LARGESCREEN]: {
-    padding: `calc(${SPACING.SCALE_2} * 0.8) 0`,
+    padding: `calc(${SPACING.SCALE_2} * 0.6) 0`,
     flexDirection: 'row',
     width: `calc(100% - ${SPACING.SCALE_6})`,
   },
