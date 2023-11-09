@@ -47,3 +47,5 @@ govuk-react-*.tgz
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+.vscode
+.history
