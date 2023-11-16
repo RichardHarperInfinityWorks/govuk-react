@@ -14,7 +14,7 @@ const Template: Story<React.ComponentProps<typeof InputField>> = (args) => <Inpu
 
 export const Default = Template.bind({});
 Default.args = {
-  input: { name: 'group0' },
+  input: { name: 'group0', widthSize: '10em' },
   children: 'National Insurance number',
 };
 

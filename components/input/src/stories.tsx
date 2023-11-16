@@ -18,7 +18,7 @@ export const WithLabel: Story = (args) => (
     <LabelText>Example label</LabelText>
     <HintText>Example hint</HintText>
     <ErrorText>Example error</ErrorText>
-    <Input />
+    <Input widthSize="20em" />
   </Label>
 );
 WithLabel.parameters = {

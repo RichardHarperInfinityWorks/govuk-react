@@ -26,7 +26,7 @@ export const InputField: React.FC<InputFieldProps> = ({ meta, children, hint, in
     <LabelText>{children}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
-    <Input error={meta.touched && !!meta.error} {...input} />
+    <Input error={meta.touched && !!meta.error} widthSize={meta.widthSize} {...input} />
   </Label>
 );
 
@@ -44,6 +44,7 @@ export interface InputFieldProps extends LabelProps {
   meta?: {
     error?: string | string[];
     touched?: boolean;
+    widthSize?: string;
   };
   children: React.ReactNode;
 }

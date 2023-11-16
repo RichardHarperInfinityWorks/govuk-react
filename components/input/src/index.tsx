@@ -12,6 +12,7 @@ import {
   BORDER_WIDTH_FORM_ELEMENT,
   BORDER_WIDTH_FORM_ELEMENT_ERROR,
   FOCUSABLE,
+  MEDIA_QUERIES,
   SPACING_POINTS,
 } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
@@ -50,6 +51,14 @@ export const Input = styled('input')<InputProps>(
   ({ error, errorColor }) => ({
     border: error ? `${BORDER_WIDTH_FORM_ELEMENT_ERROR} solid ${errorColor || ERROR_COLOUR}` : undefined,
   }),
+  ({ widthSize }) => ({
+    [MEDIA_QUERIES.TABLET]: {
+      width: 'auto',
+    },
+    [MEDIA_QUERIES.DESKTOP]: {
+      width: widthSize !== undefined ? `${widthSize}` : 'auto',
+    },
+  }),
   spacing.withWhiteSpace({ marginBottom: 0 })
 );
 
@@ -57,6 +66,7 @@ Input.defaultProps = {
   type: 'text',
   error: false,
   errorColor: undefined,
+  widthSize: undefined,
 };
 
 Input.displayName = 'Input';
@@ -64,6 +74,7 @@ Input.displayName = 'Input';
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement>, WithWhiteSpaceProps {
   error?: boolean;
   errorColor?: string;
+  widthSize?: string;
 }
 
 export default Input;
