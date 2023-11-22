@@ -52,12 +52,7 @@ export const Input = styled('input')<InputProps>(
     border: error ? `${BORDER_WIDTH_FORM_ELEMENT_ERROR} solid ${errorColor || ERROR_COLOUR}` : undefined,
   }),
   ({ widthSize }) => ({
-    [MEDIA_QUERIES.TABLET]: {
-      width: 'auto',
-    },
-    [MEDIA_QUERIES.DESKTOP]: {
-      width: widthSize !== undefined ? `${widthSize}` : 'auto',
-    },
+    maxWidth: widthSize !== undefined ? `${widthSize}` : 'auto',
   }),
   spacing.withWhiteSpace({ marginBottom: 0 })
 );

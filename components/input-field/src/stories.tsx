@@ -14,6 +14,12 @@ const Template: Story<React.ComponentProps<typeof InputField>> = (args) => <Inpu
 
 export const Default = Template.bind({});
 Default.args = {
+  input: { name: 'group0' },
+  children: 'National Insurance number',
+};
+
+export const MaxWidth10 = Template.bind({});
+MaxWidth10.args = {
   input: { name: 'group0', widthSize: '10em' },
   children: 'National Insurance number',
 };
@@ -33,7 +39,7 @@ InputWithHintText.args = {
 
 export const InputWithHintTextError = Template.bind({});
 InputWithHintTextError.args = {
-  input: { name: 'group1' },
+  input: { name: 'group1', widthSize: '10em' },
   hint: (
     <>
       It’s on your National Insurance card, benefit letter, payslip or P60.
